@@ -2,14 +2,14 @@
   <div class="footer">
     <div class="footer-left">
         <img src="../assets/logo_aquatica.svg" alt="logo">
-        <span>{{ telephoneCompany }}</span>
-        <span>{{ emailCompany }}</span>
+        <span class="footer-left-tele">{{ telephoneCompany }}</span>
+        <span class="footer-left-email">{{ emailCompany }}</span>
     </div>
     <div class="footer-right">
-        <MenuRouter />
-        <MenuSocial />
-        <span>Все права защищены © 2010-{{ nowYear }}</span>
-        <span>Обучение дайвингу в Москве</span>
+        <MenuRouter :colorElement="whiteElement" :findingElement="findingElement" />
+        <MenuSocial :colorElement="whiteElement" />
+        <span class="footer-right-law">Все права защищены © 2010-{{ nowYear }}</span>
+        <h6 class="footer-right-title">Обучение дайвингу в Москве</h6>
     </div>
   </div>
 </template>
@@ -23,6 +23,11 @@ import { mapState, mapGetters } from 'vuex'
 
 export default {
   name: 'FooterBlock',
+
+  data: () => ({
+    whiteElement: 'white',
+    findingElement: 'footer'
+  }),
 
   computed: {
     ...mapState({

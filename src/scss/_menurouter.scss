@@ -23,6 +23,17 @@
             margin-right: 45px;
         }
 
+        &-white {
+            color: $main-white;
+        }
+
+        &-ellipse {
+            &::before {
+                content: '\25cf';
+                margin-right: 10px;
+            } 
+        }
+
         &:last-child {
             margin-right: 0;
         }
@@ -32,6 +43,7 @@
         display: flex;
         justify-content: space-between;
         list-style-type: none;
+        margin: 20px 0;
 
         &-li {
             &-link {

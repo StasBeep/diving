@@ -18,6 +18,11 @@ export default {
 
   }),
 
+  props: {
+    colorElement: String,
+    findingElement: String
+  },
+
   methods: {
     stepRouting (element) {
       switch (element) {
@@ -82,6 +87,26 @@ export default {
 
     nowRouting () {
       return this.$route.path
+    },
+
+    nowColorElement () {
+      if (this.colorElement === 'white') {
+        for (let i = 0; i < this.$el.children.length; i++) {
+          this.$el.children[i].classList.add('menu-router-white')
+        }
+        return 'white'
+      }
+      return 'blue'
+    },
+
+    nowFindingElement () {
+      if (this.findingElement === 'footer') {
+        for (let i = 0; i < this.$el.children.length; i++) {
+          this.$el.children[i].classList.add('menu-router-ellipse')
+        }
+        return 'white'
+      }
+      return 'blue'
     }
   }
 }

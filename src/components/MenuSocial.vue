@@ -31,7 +31,27 @@ export default {
 
   data: () => ({
     colorSocial: '#103a58'
-  })
+  }),
+
+  props: {
+    colorElement: String
+  },
+
+  methods: {
+    changeColor () {
+      this.colorSocial = '#ffffff'
+    }
+  },
+
+  computed: {
+    nowColorElement () {
+      if (this.colorElement === 'white') {
+        this.changeColor()
+        return 'white'
+      }
+      return 'blue'
+    }
+  }
 }
 </script>
 
