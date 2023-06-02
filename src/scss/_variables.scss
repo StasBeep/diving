@@ -5,6 +5,7 @@ $main-blue: #1e549f;
 $blue-light: #2e79ba;
 $azure: #5fc9f3;
 $deep: #081f37;
+$social: #103a58;
 
 /* === wrapper === */
 /* Обёртки - отдельный блок */
@@ -15,7 +16,7 @@ $deep: #081f37;
 
     //Отступы по краям
     &-container {
-        padding: 0 36px;
+        // padding: 0 36px;
         box-sizing: border-box;
     }
     

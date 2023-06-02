@@ -1,0 +1,50 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 90px;
+    box-sizing: border-box;
+    align-items: center;
+
+    &-router {
+        @include font-size-line();
+        height: 30px;
+        padding: 1px 2px;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        color: $social;
+        margin-right: 45px;
+
+        &-main {
+            @include font-size-line();
+            color: $social;
+            padding: 1px 2px;
+            text-decoration: none;
+            margin-right: 45px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &-social {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+
+        &-li {
+            &-link {
+                &-svg {
+                    width: 28px;
+                    height: 28px;
+                    margin-right: 24px;
+                }
+            }
+
+            &:first-child {
+                margin-top: 1px;
+            }
+        }
+    }
+}
