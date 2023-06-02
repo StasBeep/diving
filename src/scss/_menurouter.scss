@@ -13,19 +13,24 @@
         background-color: transparent;
         border: none;
         color: $social;
+        margin-right: 45px;
 
         &-main {
             @include font-size-line();
             color: $social;
             padding: 1px 2px;
             text-decoration: none;
+            margin-right: 45px;
+        }
+
+        &:last-child {
+            margin-right: 0;
         }
     }
 
     &-social {
         display: flex;
         justify-content: space-between;
-        margin-left: 255px;
         list-style-type: none;
 
         &-li {
