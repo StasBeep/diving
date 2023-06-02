@@ -3,7 +3,7 @@
     <div class="footer-left">
         <img src="../assets/logo_aquatica.svg" alt="logo">
         <span class="footer-left-tele">{{ telephoneCompany }}</span>
-        <span class="footer-left-email">{{ emailCompany }}</span>
+        <a href="mailto:someone@yoursite.com" class="footer-left-email" target="_blank">{{ emailCompany }}</a>
     </div>
     <div class="footer-right">
         <MenuRouter :colorElement="whiteElement" :findingElement="findingElement" />

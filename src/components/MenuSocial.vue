@@ -38,8 +38,11 @@ export default {
   },
 
   methods: {
-    changeColor () {
-      this.colorSocial = '#ffffff'
+    _changeColor () {
+      if (this.colorElement === 'white') {
+        this.colorSocial = '#ffffff'
+        this.$el.classList.add('menu-social-lists')
+      }
     }
   },
 
@@ -51,6 +54,10 @@ export default {
       }
       return 'blue'
     }
+  },
+
+  mounted () {
+    this._changeColor()
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <router-link class="menu-router-main" to="/">Главная</router-link>
+    <router-link v-show="elementShow" class="menu-router-main" to="/">Главная</router-link>
     <button class="menu-router" v-for="item in collectionsRouter" :key="item" @click="stepRouting(item)">
         {{ item }}
     </button>
@@ -15,7 +15,7 @@ export default {
   name: 'MenuRouter',
 
   data: () => ({
-
+    elementShow: true
   }),
 
   props: {
@@ -76,6 +76,23 @@ export default {
         return true
       }
       return false
+    },
+
+    _changeColor () {
+      if (this.colorElement === 'white') {
+        for (let i = 0; i < this.$el.children.length; i++) {
+          this.$el.children[i].classList.add('menu-router-white')
+        }
+        this.elementShow = false
+      }
+    },
+
+    _changePosition () {
+      if (this.findingElement === 'footer') {
+        for (let i = 0; i < this.$el.children.length; i++) {
+          this.$el.children[i].classList.add('menu-router-ellipse')
+        }
+      }
     }
   },
 
@@ -91,9 +108,7 @@ export default {
 
     nowColorElement () {
       if (this.colorElement === 'white') {
-        for (let i = 0; i < this.$el.children.length; i++) {
-          this.$el.children[i].classList.add('menu-router-white')
-        }
+        this._changeColor()
         return 'white'
       }
       return 'blue'
@@ -101,13 +116,16 @@ export default {
 
     nowFindingElement () {
       if (this.findingElement === 'footer') {
-        for (let i = 0; i < this.$el.children.length; i++) {
-          this.$el.children[i].classList.add('menu-router-ellipse')
-        }
+        this._changePosition()
         return 'white'
       }
       return 'blue'
     }
+  },
+
+  mounted () {
+    this._changeColor()
+    this._changePosition()
   }
 }
 </script>
