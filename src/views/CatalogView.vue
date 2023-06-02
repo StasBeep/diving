@@ -7,6 +7,7 @@
             <header class="header">
                 <HeaderMain />
                 <ModalFeedback />
+                <MenuRouter />
             </header>
 
             <!--Основная часть-->
@@ -28,12 +29,14 @@
 
 import HeaderMain from '../components/Header.vue'
 import ModalFeedback from '../components/ModalFeedback.vue'
+import MenuRouter from '../components/MenuRouter.vue'
 
 export default {
   name: 'CatalogView',
   components: {
     HeaderMain,
-    ModalFeedback
+    ModalFeedback,
+    MenuRouter
   }
 }
 </script>
