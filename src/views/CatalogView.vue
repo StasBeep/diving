@@ -2,11 +2,15 @@
     <!--обёртка для всего содержимого, чтобы прижать footer к нижней части-->
     <div class="wrapper wrapper-forcontent">
         <!--Содержимое сайта без подвала (нужно для прижатия подвала к нижней части)-->
-        <div class="content-without-footer">
+        <div class="wrapper-container content-without-footer">
             <!--Шапка сайта-->
             <header class="header">
                 <HeaderMain />
                 <ModalFeedback />
+                <nav class="menu">
+                    <MenuRouter />
+                    <MenuSocial />
+                </nav>
             </header>
 
             <!--Основная часть-->
@@ -28,12 +32,16 @@
 
 import HeaderMain from '../components/Header.vue'
 import ModalFeedback from '../components/ModalFeedback.vue'
+import MenuRouter from '../components/MenuRouter.vue'
+import MenuSocial from '../components/MenuSocial.vue'
 
 export default {
   name: 'CatalogView',
   components: {
     HeaderMain,
-    ModalFeedback
+    ModalFeedback,
+    MenuRouter,
+    MenuSocial
   }
 }
 </script>
