@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button>Обратная связь</button>
+    <button class="header-top-feedback">Обратная связь</button>
   </div>
 </template>
 

@@ -1,13 +1,31 @@
 <template>
     <div>
-        <img class="header-img" src="../assets/logo_aquatica.svg" alt="logo">
+        <div class="header-top">
+          <img src="../assets/logo_aquatica.svg" alt="logo">
+          <ModalFeedback />
+        </div>
+        <nav class="menu">
+          <MenuRouter />
+          <MenuSocial />
+        </nav>
     </div>
 </template>
 
 <script>
+
+import ModalFeedback from './ModalFeedback.vue'
+import MenuRouter from './MenuRouter.vue'
+import MenuSocial from './MenuSocial.vue'
+
 export default {
-  name: 'HeaderMain'
+  name: 'HeaderMain',
+
+  components: {
+    ModalFeedback,
+    MenuRouter,
+    MenuSocial
+  }
 }
 </script>
 
-<style></style>
+<style src="../scss/style.scss" lang="scss" scoped />

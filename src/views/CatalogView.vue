@@ -4,13 +4,8 @@
         <!--Содержимое сайта без подвала (нужно для прижатия подвала к нижней части)-->
         <div class="wrapper-container content-without-footer">
             <!--Шапка сайта-->
-            <header class="header">
+            <header>
                 <HeaderMain />
-                <ModalFeedback />
-                <nav class="menu">
-                    <MenuRouter />
-                    <MenuSocial />
-                </nav>
             </header>
 
             <!--Основная часть-->
@@ -31,17 +26,11 @@
 <script>
 
 import HeaderMain from '../components/Header.vue'
-import ModalFeedback from '../components/ModalFeedback.vue'
-import MenuRouter from '../components/MenuRouter.vue'
-import MenuSocial from '../components/MenuSocial.vue'
 
 export default {
   name: 'CatalogView',
   components: {
-    HeaderMain,
-    ModalFeedback,
-    MenuRouter,
-    MenuSocial
+    HeaderMain
   }
 }
 </script>
