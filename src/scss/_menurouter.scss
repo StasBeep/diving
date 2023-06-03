@@ -21,6 +21,10 @@
             padding: 1px 2px;
             text-decoration: none;
             margin-right: 45px;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
 
         &-white {
@@ -32,6 +36,7 @@
             &::before {
                 content: '\25cf';
                 margin-right: 10px;
+                display:inline-block;
             }
 
             &:nth-child(2)::before {
@@ -41,6 +46,10 @@
 
         &:last-child {
             margin-right: 0;
+        }
+
+        &:hover {
+            text-decoration: underline;
         }
     }
 

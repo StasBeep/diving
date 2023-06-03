@@ -1,10 +1,14 @@
 .footer {
-    display: flex;
-    justify-content: space-between;
+    
     background-color: $main-blue;
     padding: 100px 90px 30px;
     background-image: url(../assets/curve-footer.jpg);
     background-repeat: no-repeat;
+
+    &-up {
+        display: flex;
+        justify-content: space-between;
+    }
 
     &-left {
         &-tele {
@@ -40,5 +44,19 @@
             text-align: end;
             margin: 0;
         }
+
+        &-version {
+            @include font-size-line(400, 12px, 14px);
+            display: block;
+            text-align: end;
+            color: $main-white;
+        }
+    }
+
+    &-anchor {
+        @include font-size-line(400, 12px, 14px);
+        display: block;
+        text-align: center;
+        color: $main-white;
     }
 }
