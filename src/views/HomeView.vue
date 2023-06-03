@@ -5,7 +5,6 @@
     <div class="content-without-footer">
       <!--Шапка сайта-->
       <header class="header">
-        <HeaderMain />
       </header>
 
       <!--Основная часть-->
@@ -25,12 +24,10 @@
 
 <script>
 
-import HeaderMain from '../components/Header.vue'
-
 export default {
   name: 'HomeView',
   components: {
-    HeaderMain
+
   }
 }
 </script>
