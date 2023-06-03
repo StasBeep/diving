@@ -21,10 +21,35 @@
             padding: 1px 2px;
             text-decoration: none;
             margin-right: 45px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &-white {
+            color: $main-white;
+            margin-right: 15px;
+        }
+
+        &-ellipse {
+            &::before {
+                content: '\25cf';
+                margin-right: 10px;
+                display:inline-block;
+            }
+
+            &:nth-child(2)::before {
+                content: ''
+            }
         }
 
         &:last-child {
             margin-right: 0;
+        }
+
+        &:hover {
+            text-decoration: underline;
         }
     }
 
@@ -32,19 +57,33 @@
         display: flex;
         justify-content: space-between;
         list-style-type: none;
+        margin: 20px 0;
+        padding: 0;
 
         &-li {
+            display: block;
+            margin-right: 24px;
+
             &-link {
                 &-svg {
                     width: 28px;
                     height: 28px;
-                    margin-right: 24px;
                 }
             }
 
             &:first-child {
                 margin-top: 1px;
             }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &-lists {
+            width: 126px;
+            padding: 0;
+            margin: 20px 0 20px auto;
         }
     }
 }

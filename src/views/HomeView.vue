@@ -5,8 +5,6 @@
     <div class="content-without-footer">
       <!--Шапка сайта-->
       <header class="header">
-        <HeaderMain />
-        <ModalFeedback />
       </header>
 
       <!--Основная часть-->
@@ -26,14 +24,10 @@
 
 <script>
 
-import HeaderMain from '../components/Header.vue'
-import ModalFeedback from '../components/ModalFeedback.vue'
-
 export default {
   name: 'HomeView',
   components: {
-    HeaderMain,
-    ModalFeedback
+
   }
 }
 </script>

@@ -1,0 +1,62 @@
+.footer {
+    
+    background-color: $main-blue;
+    padding: 100px 90px 30px;
+    background-image: url(../assets/curve-footer.jpg);
+    background-repeat: no-repeat;
+
+    &-up {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-left {
+        &-tele {
+            display: block;
+            @include font-size-line(500, 22px, 26px);
+            color: $main-white;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+
+        &-email {
+            @include font-size-line();
+            color: $main-white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    }
+
+    &-right {
+        padding-top: 42px;
+
+        &-law {
+            @include font-size-line(400, 12px, 14px);
+            display: block;
+            text-align: end;
+            color: $main-white;
+        }
+
+        &-title {
+            @include font-size-line(400, 12px, 14px);
+            color: $main-white;
+            text-align: end;
+            margin: 0;
+        }
+
+        &-version {
+            @include font-size-line(400, 12px, 14px);
+            display: block;
+            text-align: end;
+            color: $main-white;
+        }
+    }
+
+    &-anchor {
+        @include font-size-line(400, 12px, 14px);
+        display: block;
+        text-align: center;
+        color: $main-white;
+    }
+}

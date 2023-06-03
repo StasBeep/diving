@@ -19,18 +19,22 @@
         </div>
 
         <!--Подвал сайта-->
-        <footer>Версия: 0.0.0</footer>
+        <footer>
+            <FooterBlock />
+        </footer>
     </div>
 </template>
 
 <script>
 
 import HeaderMain from '../components/Header.vue'
+import FooterBlock from '../components/Footer.vue'
 
 export default {
   name: 'CatalogView',
   components: {
-    HeaderMain
+    HeaderMain,
+    FooterBlock
   }
 }
 </script>
