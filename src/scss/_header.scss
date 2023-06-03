@@ -1,9 +1,36 @@
 .header {
+    background-image: url(../assets/header-second.jpg);
+    padding: 30px 90px 160px;
+
     &-top {
         display: flex;
         justify-content: space-between;
         padding: 18px 90px 172px;
         background-image: url(../assets/header-main.jpg);
         background-repeat: no-repeat;
+    }
+
+    &-secondmenu {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 48px;
+
+        &-route {
+            align-self: center;
+            margin-right: 150px;
+        }
+
+        &-feedback>.header-top-feedback {
+            margin-top: 0;
+        }
+
+        &-social {
+            margin: 0 !important;
+            align-self: center;
+
+            &>.menu-social-li>.menu-social-li-link>.menu-social-li-link-svg {
+                fill: $main-white;
+            }
+        }
     }
 }
