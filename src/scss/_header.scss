@@ -1,9 +1,158 @@
 .header {
+    background-image: url(../assets/header-second.jpg);
+    padding: 30px 0;
+    background-repeat: no-repeat;
+
     &-top {
         display: flex;
         justify-content: space-between;
         padding: 18px 90px 172px;
         background-image: url(../assets/header-main.jpg);
         background-repeat: no-repeat;
+    }
+
+    &-secondmenu {
+        padding: 0 90px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 48px;
+
+        &-route {
+            align-self: center;
+            margin-right: 150px;
+        }
+
+        &-feedback>.header-top-feedback {
+            margin-top: 0;
+        }
+
+        &-social {
+            margin: 0 !important;
+            align-self: center;
+
+            &>.menu-social-li>.menu-social-li-link>.menu-social-li-link-svg {
+                fill: $main-white;
+            }
+        }
+    }
+
+    &-info {
+        padding: 0 90px;
+
+        &-text {
+            display: block;
+            margin-top: 124px;
+            @include font-size-line(500, 32px, 38px);
+            color: $main-white;
+
+        }
+
+        &-btn {
+            @include font-size-line(500, 24px, 28px);
+            color: $main-white;
+            background-color: transparent;
+            padding: 16px 120px;
+            border: 3px solid $main-white;
+            border-radius: 13px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: border 0.7s ease,
+                color 0.7s ease;
+
+            &:hover {
+                color: $azure;
+                border: 3px solid $azure;
+            }
+        }
+
+        &-details {
+            &-text {
+                @include font-size-line(500, 24px, 28px);
+                color: $main-white;
+
+                &-svg {
+                    fill: $main-white;
+                    margin-right: 14px;
+                }
+            }
+
+            & > .header-info-details-text:first-child {
+                margin-right: 40px;
+            }
+        }
+
+        & > .header-info-text:nth-child(3) {
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+    }
+
+    &-cards {
+        display: flex;
+        justify-content: space-between;
+        background-image: url(../assets/curve-header.jpg);
+        background-repeat: no-repeat;
+        background-position-y: bottom;
+        padding: 125px 90px 166px;
+        list-style-type: none;
+        margin: 0;
+
+        &-li {
+            padding-top: 20px;
+            background: linear-gradient(0deg, #1E549F 0%, rgba(20, 116, 184, 0) 100%);
+            border-radius: 0px 0px 13px 13px;
+            width: 365px;
+
+            &-title {
+                @include font-size-line(500, 24px, 28px);
+                color: $main-white;
+                display: flex;
+                padding: 0 30px;
+
+                &-svg {
+                    fill: $main-white;
+                    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(0,212,255,1) 100%);
+                    border-radius: 7px;
+                    padding: 7px;
+                    margin-right: 7px;
+                    align-self: center;
+                }
+
+                &-text {
+                    display: block;
+                    align-self: center;
+                }
+            }
+
+            &-text {
+                @include font-size-line(400, 16px, 19px);
+                color: $main-white;
+                padding: 0 30px;
+                margin: 6px 0 24px;
+            }
+
+            &-router {
+                display: block;
+                @include font-size-line(500, 18px, 21px);
+                color: $main-white;
+                text-decoration: none;
+                text-align: center;
+                padding: 8px 10px;
+                background: linear-gradient(180deg, #5FC9F3 0%, #55ABF5 100%);
+                border-radius: 7px;
+                
+                &:hover {
+                    background: $social;
+                }
+            }
+        }
+
+        & > .header-cards-li:nth-child(2) > .header-cards-li-title > .header-cards-li-title-svg {
+            padding: 7.5px 6px;
+        }
+
+        & > .header-cards-li:last-child > .header-cards-li-title > .header-cards-li-title-svg {
+            padding: 6px 9px;
+        }
     }
 }
