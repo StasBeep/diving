@@ -1,0 +1,34 @@
+.direct {
+    margin-top:  70px;
+
+    &-discription {
+        @include font-size-line();
+        text-align: center;
+        margin: 0;
+        text-transform: uppercase;
+        color: $social;
+        letter-spacing: 0.1em;
+        opacity: 0.5;
+    }
+
+    &-title {
+        @include font-size-line(700, 64px, 75px);
+        color: $social;
+        text-align: center;
+        margin: 0;
+
+        &-el {
+            color: $azure;
+        }
+    }
+
+    &-text {
+        @include font-size-line();
+        max-width: 1193px;
+        text-align: center;
+        margin: 35px auto 95px;
+        color: $social;
+        letter-spacing: 0.05em;
+        opacity: 0.5;
+    }
+}
