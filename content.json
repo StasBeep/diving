@@ -1,6 +1,24 @@
 {
     "offers": [{
-        "img": "",
+        "img": "https://github.com/StasBeep/diving/blob/content-line/default-img.jpg",
+        "title": "Peak Perfomance Buoyancy",
+        "description": "Курс мастерской плавучести Peak Perfomance Buoyancy.",
+        "link": "#"
+    },
+    {
+        "img": "https://github.com/StasBeep/diving/blob/content-line/default-img.jpg",
+        "title": "Peak Perfomance Buoyancy",
+        "description": "Курс мастерской плавучести Peak Perfomance Buoyancy.",
+        "link": "#"
+    },
+    {
+        "img": "https://github.com/StasBeep/diving/blob/content-line/default-img.jpg",
+        "title": "Peak Perfomance Buoyancy",
+        "description": "Курс мастерской плавучести Peak Perfomance Buoyancy.",
+        "link": "#"
+    },
+    {
+        "img": "https://github.com/StasBeep/diving/blob/content-line/default-img.jpg",
         "title": "Peak Perfomance Buoyancy",
         "description": "Курс мастерской плавучести Peak Perfomance Buoyancy.",
         "link": "#"
