@@ -6,6 +6,13 @@
     padding: 0;
     box-sizing: border-box;
 
+    // TODO: Изменение для сдвига вправо
+    // ! width изменяется для экономии ресурсов
+    // ! и заряда телефона
+    overflow-x: visible;
+    scroll-snap-type: x mandatory;
+    width: 1300px;
+
     &-li {
         max-width: 318px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06), 0px 10px 16px rgba(0, 0, 0, 0.05);
@@ -41,7 +48,6 @@
             color: $azure;
             padding: 8px auto 10px;
             box-sizing: border-box;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06), 0px 10px 16px rgba(0, 0, 0, 0.05);
         }
     }
 }
