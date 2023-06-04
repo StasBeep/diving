@@ -75,7 +75,7 @@
     </div>
 
     <!--Подвал сайта-->
-    <footer>Версия: 0.0.0</footer>
+    <FooterBlock />
   </div>
 </template>
 
@@ -84,12 +84,15 @@ import MenuRouter from '../components/MenuRouter.vue'
 import MenuSocial from '../components/MenuSocial.vue'
 import ModalFeedback from '../components/ModalFeedback.vue'
 
+import FooterBlock from '@/components/Footer.vue'
+
 export default {
   name: 'HomeView',
   components: {
     MenuRouter,
     MenuSocial,
-    ModalFeedback
+    ModalFeedback,
+    FooterBlock
   },
 
   data: () => ({
