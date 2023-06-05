@@ -74,7 +74,7 @@
         </article>
         <!--Вторая секция-->
         <section>
-          <NewsInfo />
+          <NewsInfo :dataNews="getOffers" />
         </section>
       </main>
     </div>
@@ -85,6 +85,8 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
+
 import MenuRouter from '../components/MenuRouter.vue'
 import MenuSocial from '../components/MenuSocial.vue'
 import ModalFeedback from '../components/ModalFeedback.vue'
@@ -106,7 +108,27 @@ export default {
   data: () => ({
     colorElement: 'white',
     findingElement: 'footer'
-  })
+  }),
+
+  methods: {
+    ...mapActions([
+      'fetchOffers'
+    ])
+  },
+
+  computed: {
+    ...mapGetters([
+      'getOffers'
+    ])
+  },
+
+  mounted () {
+    this.fetchOffers()
+  },
+
+  beforeUnmount () {
+    this.getOffers = []
+  }
 }
 </script>
 
