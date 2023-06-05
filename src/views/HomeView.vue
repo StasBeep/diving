@@ -111,15 +111,15 @@ export default {
   }),
 
   methods: {
-    ...mapActions([
-      'fetchOffers'
-    ])
+    ...mapActions('newsinfooffer', {
+      fetchOffers: 'fetchOffers'
+    })
   },
 
   computed: {
-    ...mapGetters([
-      'getOffers'
-    ])
+    ...mapGetters('newsinfooffer', {
+      getOffers: 'getOffers'
+    })
   },
 
   mounted () {

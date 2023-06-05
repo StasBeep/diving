@@ -97,7 +97,7 @@ export default {
   },
 
   computed: {
-    ...mapState({
+    ...mapState('applyComponents', {
       collectionsRouter: 'menuElement',
       collectionsLink: 'linkMenu'
     }),

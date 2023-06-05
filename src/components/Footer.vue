@@ -48,13 +48,13 @@ export default {
   },
 
   computed: {
-    ...mapState({
+    ...mapState('applyComponents', {
       emailCompany: 'emailCompany',
       telephoneCompany: 'telephoneCompany',
       version: 'version'
     }),
 
-    ...mapGetters({
+    ...mapGetters('applyComponents', {
       nowYear: 'getNowYear'
     })
   },
