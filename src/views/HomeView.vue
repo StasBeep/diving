@@ -73,7 +73,9 @@
           <p class="direct-text">Добро пожаловать! На страницах нашего сайта вы найдете качественную, нужную информацию касаемо вашего увлечения. Более подробно о нас вам расскажут разделы нашего сайта, благодаря отзывам, отчетам, статьям вы познакомитесь с нами поближе, узнаете, что дайвинг в Москве это реальность. Много полезной информации вам предоставит социальный блог «Акватика» там же, вы можете размещать свои отчеты и отзывы о путешествиях, а так же находить новых друзей по увлечению. Для прямого общения он-лайн, приглашаем Вас на тематический форум и в соц сети, где "живут" участники клуба которые всегда рады новым знакомствам.</p>
         </article>
         <!--Вторая секция-->
-        <section></section>
+        <section>
+          <NewsInfo :dataNews="getOffers" />
+        </section>
       </main>
     </div>
 
@@ -83,9 +85,13 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
+
 import MenuRouter from '../components/MenuRouter.vue'
 import MenuSocial from '../components/MenuSocial.vue'
 import ModalFeedback from '../components/ModalFeedback.vue'
+
+import NewsInfo from '../components/NewsInfo.vue'
 
 import FooterBlock from '@/components/Footer.vue'
 
@@ -95,13 +101,34 @@ export default {
     MenuRouter,
     MenuSocial,
     ModalFeedback,
+    NewsInfo,
     FooterBlock
   },
 
   data: () => ({
     colorElement: 'white',
     findingElement: 'footer'
-  })
+  }),
+
+  methods: {
+    ...mapActions([
+      'fetchOffers'
+    ])
+  },
+
+  computed: {
+    ...mapGetters([
+      'getOffers'
+    ])
+  },
+
+  mounted () {
+    this.fetchOffers()
+  },
+
+  beforeUnmount () {
+    this.getOffers = []
+  }
 }
 </script>
 

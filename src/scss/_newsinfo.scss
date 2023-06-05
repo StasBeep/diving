@@ -1,0 +1,53 @@
+.newscomponent {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    box-sizing: border-box;
+
+    // TODO: Изменение для сдвига вправо
+    // ! width изменяется для экономии ресурсов
+    // ! и заряда телефона
+    overflow-x: visible;
+    scroll-snap-type: x mandatory;
+    width: 1300px;
+
+    &-li {
+        max-width: 318px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06), 0px 10px 16px rgba(0, 0, 0, 0.05);
+
+        &-img {
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        &-title {
+            @include font-size-line(700, 18px, 21px);
+            display: block;
+            padding-left: 20px;
+            color: $social;
+            margin-bottom: 7px;
+        }
+
+        &-text {
+            @include font-size-line(400, 14px, 16px);
+            padding: 0 20px;
+            letter-spacing: 0.05em;
+            opacity: 0.5;
+            color: $social;
+            margin: 0;
+        }
+
+        &-link {
+            @include font-size-line(500, 14px, 16px);
+            display: block;
+            margin-top: 18px;
+            text-align: center;
+            text-decoration: none;
+            color: $azure;
+            padding: 8px auto 10px;
+            box-sizing: border-box;
+        }
+    }
+}
