@@ -40,6 +40,9 @@ export default {
   },
 
   methods: {
+    /**
+     * Просмотр ширины страницы
+     */
     _showUp () {
       if (this.$el.clientWidth === 375) {
         this.widthWindowsShow = true

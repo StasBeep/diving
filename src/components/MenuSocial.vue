@@ -38,6 +38,9 @@ export default {
   },
 
   methods: {
+    /**
+     * Изменение цвета в зависимости от положения компонента
+     */
     _changeColor () {
       if (this.colorElement === 'white') {
         this.colorSocial = '#ffffff'
@@ -47,6 +50,9 @@ export default {
   },
 
   computed: {
+    /**
+     * Проверка на положение компонента относительно вёрстки
+     */
     nowColorElement () {
       if (this.colorElement === 'white') {
         this.changeColor()

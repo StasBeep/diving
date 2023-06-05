@@ -24,6 +24,10 @@ export default {
   },
 
   methods: {
+    /**
+     * Изменение командной строки
+     * @param { String } path routing
+     */
     stepRouting (element) {
       switch (element) {
         case `${this.collectionsRouter[0]}`:
@@ -71,6 +75,10 @@ export default {
       }
     },
 
+    /**
+     * Наблюдение за состоянием route
+     * @param { String } i path
+     */
     _checkRouting (i) {
       if (this.nowRouting === `${this.collectionsLink[i]}`) {
         return true
@@ -78,6 +86,9 @@ export default {
       return false
     },
 
+    /**
+     * Изменение цвета относительно положения элементов
+     */
     _changeColor () {
       if (this.colorElement === 'white') {
         for (let i = 0; i < this.$el.children.length; i++) {
@@ -87,6 +98,9 @@ export default {
       }
     },
 
+    /**
+     * Добавление точек в меню относительно положения компонента
+     */
     _changePosition () {
       if (this.findingElement === 'footer') {
         for (let i = 0; i < this.$el.children.length; i++) {
@@ -102,10 +116,16 @@ export default {
       collectionsLink: 'linkMenu'
     }),
 
+    /**
+     * Данный path
+     */
     nowRouting () {
       return this.$route.path
     },
 
+    /**
+     * Наблюдение за цветом элемента
+     */
     nowColorElement () {
       if (this.colorElement === 'white') {
         this._changeColor()
@@ -114,6 +134,9 @@ export default {
       return 'blue'
     },
 
+    /**
+     * Наблюдение за положением компонента на странице
+     */
     nowFindingElement () {
       if (this.findingElement === 'footer') {
         this._changePosition()
