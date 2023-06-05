@@ -48,3 +48,17 @@
         margin: 26px auto 0;
     }
 }
+
+.history {
+    @include font-size-line();
+    padding: 25px;
+    border: 1px solid $history;
+    margin: 0 auto;
+    max-width: 1265px;
+    text-align: center;
+    border-left: none;
+    border-right: none;
+    color: $history-text;
+    letter-spacing: 0.05em;
+    opacity: 0.6;
+}
