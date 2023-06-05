@@ -66,17 +66,23 @@
 
       <!--Основная часть-->
       <main>
-        <!--Первая секция основной части-->
+        <!--Секция дайвинг-->
         <article class="direct">
           <h2 class="direct-discription">Обучение дайвингу в Москве</h2>
           <h1 class="direct-title">Дайвинг <span class="direct-title-el">в Москве</span></h1>
           <p class="direct-text">Добро пожаловать! На страницах нашего сайта вы найдете качественную, нужную информацию касаемо вашего увлечения. Более подробно о нас вам расскажут разделы нашего сайта, благодаря отзывам, отчетам, статьям вы познакомитесь с нами поближе, узнаете, что дайвинг в Москве это реальность. Много полезной информации вам предоставит социальный блог «Акватика» там же, вы можете размещать свои отчеты и отзывы о путешествиях, а так же находить новых друзей по увлечению. Для прямого общения он-лайн, приглашаем Вас на тематический форум и в соц сети, где "живут" участники клуба которые всегда рады новым знакомствам.</p>
         </article>
-        <!--Вторая секция-->
+        <!--Секция горячие предложения-->
         <section class="suggestion">
           <h3 class="direct-discription">Успей приобрести путёвку</h3>
           <h2 class="direct-title">Горячие <span class="direct-title-el">предложения</span></h2>
           <NewsInfo class="suggestion-cards" :dataNews="getOffers" />
+        </section>
+        <!--Секция блог-->
+        <section class="blog">
+          <h3 class="direct-discription">Будь в курсе последних новостей</h3>
+          <h2 class="direct-title">Наш <span class="direct-title-el">блог</span></h2>
+          <NewsInfo class="blog-cards" :dataNews="getBlog" />
         </section>
       </main>
     </div>
@@ -113,23 +119,29 @@ export default {
   }),
 
   methods: {
-    ...mapActions('newsinfooffer', {
-      fetchOffers: 'fetchOffers'
+    ...mapActions('newsinfo', {
+      fetchOffers: 'fetchOffers',
+      fetchBlog: 'fetchBlog'
     })
   },
 
   computed: {
-    ...mapGetters('newsinfooffer', {
-      getOffers: 'getOffers'
+    ...mapGetters('newsinfo', {
+      getOffers: 'getOffers',
+      getBlog: 'getBlog'
     })
   },
 
   mounted () {
+    // Подгрузка данных с сервера
     this.fetchOffers()
+    this.fetchBlog()
   },
 
   beforeUnmount () {
+    // Удаление данных после выхода со страницы
     this.getOffers = []
+    this.getBlog = []
   }
 }
 </script>

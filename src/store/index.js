@@ -30,18 +30,26 @@ const applyComponents = {
   }
 }
 
-const newsinfooffer = {
+const newsinfo = {
   namespaced: true,
   state: {
-    offers: []
+    offers: [],
+    blog: []
   },
   getters: {
     // Положение данных горячие предложения
-    getOffers: state => state.offers
+    getOffers: state => state.offers,
+
+    // Положение данных наш блог
+    getBlog: state => state.blog
   },
   mutations: {
     setOffers (state, payload) {
       state.offers = payload
+    },
+
+    setBlog (state, payload) {
+      state.blog = payload
     }
   },
   // Запрос -> получение -> вызов действий mutations
@@ -62,6 +70,24 @@ const newsinfooffer = {
       }).then(res => {
         commit('setOffers', res)
       })
+    },
+
+    /**
+     * Асинхронных запрос на данные горячего предложения
+     * @param { commit } Передача под mutations
+     * @returns Promise
+     */
+    fetchBlog ({ commit }) {
+      return new Promise((resolve) => {
+        axios
+          .get(`${APIcontent}`)
+          .then(response => {
+            resolve(response.data.blog)
+          })
+          .catch(error => console.log(error))
+      }).then(res => {
+        commit('setBlog', res)
+      })
     }
   }
 }
@@ -79,6 +105,6 @@ export default new Vuex.Store({
   actions: { },
   modules: {
     applyComponents: applyComponents,
-    newsinfooffer: newsinfooffer
+    newsinfo: newsinfo
   }
 })
