@@ -34,11 +34,15 @@ const newsinfo = {
   namespaced: true,
   state: {
     offers: [],
+    reviews: [],
     blog: []
   },
   getters: {
     // Положение данных горячие предложения
     getOffers: state => state.offers,
+
+    // Положение данных отзывы
+    getReviews: state => state.reviews,
 
     // Положение данных наш блог
     getBlog: state => state.blog
@@ -46,6 +50,10 @@ const newsinfo = {
   mutations: {
     setOffers (state, payload) {
       state.offers = payload
+    },
+
+    setReviews (state, payload) {
+      state.reviews = payload
     },
 
     setBlog (state, payload) {
@@ -69,6 +77,24 @@ const newsinfo = {
           .catch(error => console.log(error))
       }).then(res => {
         commit('setOffers', res)
+      })
+    },
+
+    /**
+     * Асинхронных запрос на данные отзывы
+     * @param { commit } Передача под mutations
+     * @returns Promise
+     */
+    fetchReviews ({ commit }) {
+      return new Promise((resolve) => {
+        axios
+          .get(`${APIcontent}`)
+          .then(response => {
+            resolve(response.data.reviews)
+          })
+          .catch(error => console.log(error))
+      }).then(res => {
+        commit('setReviews', res)
       })
     },
 
