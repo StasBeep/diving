@@ -43,10 +43,10 @@
             @include font-size-line(500, 14px, 16px);
             display: block;
             margin-top: 18px;
+            margin-bottom: 10px;
             text-align: center;
             text-decoration: none;
             color: $azure;
-            padding: 8px auto 10px;
             box-sizing: border-box;
         }
     }
