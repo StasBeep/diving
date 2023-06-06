@@ -93,6 +93,9 @@
         <figure class="history">
           Вы когда-нибудь задумывались над тем, что океан является самой древней субстанцией, которая существует на планете? Разумеется,это не мыслящий Океан Станислава Лема под названием Солярис, но всё же, не вызывает сомнений,что зародилась жизнь именно в водных глубинах. Не важно, будь это дайвинг в Москве, Подмосковное озеро или погружение на океанских просторах, каждый раз, когда человек готовится к погружению он испытывает волнение, которое вполне объяснимо. Водная гладь скрывает огромный потенциал, ведь она и является источником жизни. Океан манит, содержит огромное количество тайн и загадок. Достаточно только раз погрузиться под воду, и позитивные ощущения уже никогда не забудутся, они останутся навсегда, как часть самой жизни.
         </figure>
+        <figure>
+          <SocialLink />
+        </figure>
       </main>
     </div>
 
@@ -109,6 +112,7 @@ import MenuSocial from '../components/MenuSocial.vue'
 import ModalFeedback from '../components/ModalFeedback.vue'
 
 import NewsInfo from '../components/NewsInfo.vue'
+import SocialLink from '../components/SocialLink.vue'
 
 import FooterBlock from '@/components/Footer.vue'
 
@@ -119,6 +123,7 @@ export default {
     MenuSocial,
     ModalFeedback,
     NewsInfo,
+    SocialLink,
     FooterBlock
   },
 
