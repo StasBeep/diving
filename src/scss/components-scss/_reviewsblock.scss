@@ -1,0 +1,111 @@
+.reviews-block {
+    padding: 37px;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #5FC9F3 0%, #55ABF5 100%);
+
+    &-text {
+        @include font-size-line();
+        display: block;
+        color: $main-white;
+        letter-spacing: 0.1em;
+        opacity: 0.5;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &-title {
+        display: block;
+        @include font-size-line(700, 64px, 75px);
+        color: $main-white;
+        text-align: center;
+        margin-bottom: 26px;
+    }
+
+    &-list {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        max-width: 1367px;
+
+        &-li {
+            width: 500px;
+            padding: 29px 40px 30px;
+            background-color: $main-white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06), 0px 10px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+
+            &-img {
+                display: block;
+                border-radius: 50%;
+                width: 160px;
+                height: 160px;
+                margin: 0 auto;
+            }
+
+            &-title {
+                @include font-size-line(500, 28px, 33px);
+                display: block;
+                margin: 14px 0;
+                color: $social;
+                text-align: center;
+            }
+
+            &-text {
+                @include font-size-line(400, 20px, 23px);
+                text-align: center;
+                color: $social;
+                letter-spacing: 0.05em;
+                opacity: 0.5;
+            }
+
+            &:first-child {
+                width: 375px;
+                padding: 17px;
+                height: 300px;
+                align-self: center;
+                mix-blend-mode: multiply;
+                margin-right: 58px;
+
+                & > .reviews-block-list-li {
+                    &-img {
+                        width: 126px;
+                        height: 126px;
+                    }
+
+                    &-title {
+                        @include font-size-line(500, 24px, 28px);
+                    }
+
+                    &-text {
+                        @include font-size-line(400, 16px, 18px);
+                    }
+                }
+            }
+
+            &:last-child {
+                width: 375px;
+                padding: 17px;
+                height: 300px;
+                align-self: center;
+                mix-blend-mode: multiply;
+                margin-left: 58px;
+
+                & > .reviews-block-list-li {
+                    &-img {
+                        width: 126px;
+                        height: 126px;
+                    }
+
+                    &-title {
+                        @include font-size-line(500, 24px, 28px);
+                    }
+
+                    &-text {
+                        @include font-size-line(400, 16px, 18px);
+                    }
+                }
+            }
+        }
+    }
+}
