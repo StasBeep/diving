@@ -1,0 +1,46 @@
+.social-cards {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-width: 1050px;
+
+    &-card {
+        width: 325px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06), 0px 10px 16px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 43px 20px 41px;
+        box-sizing: border-box;
+
+        &-img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        &-title {
+            @include font-size-line();
+            display: block;
+            text-transform: uppercase;
+            text-align: center;
+            opacity: 0.5;
+            letter-spacing: 0.1em;
+            margin-top: 24px;
+            margin-bottom: 22px;
+        }
+
+        &-link {
+            display: block;
+            @include font-size-line(500, 18px, 21px);
+            text-decoration: none;
+            padding-top: 11px;
+            padding-bottom: 12px;
+            box-sizing: border-box;
+            border-radius: 12px;
+            background: linear-gradient(180deg, #5FC9F3 0%, #55ABF5 100%);
+            box-shadow: 0px 4px 10px rgba(92, 194, 243, 0.25);
+            color: $main-white;
+            text-align: center;
+        }
+    }
+}
