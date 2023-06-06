@@ -50,27 +50,23 @@
     }],
     
     "reviews": [{
-        "img": "https://raw.githubusercontent.com/StasBeep/diving/content-line/default-img.jpg",
-        "title": "Peak Perfomance Buoyancy",
-        "description": "Курс мастерской плавучести Peak Perfomance Buoyancy.",
-        "link": "#"
+        "img": "https://raw.githubusercontent.com/StasBeep/diving/content-line/avatar-reviews.jpg",
+        "title": "Валентин М.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper justo nec arcu mollis, sed congue odio mollis. Donec feugiat pellentesque accumsan.1"
     },
     {
-        "img": "https://raw.githubusercontent.com/StasBeep/diving/content-line/default-img.jpg",
-        "title": "Peak Perfomance Buoyancy",
-        "description": "Курс мастерской плавучести Peak Perfomance Buoyancy.",
-        "link": "#"
+        "img": "https://raw.githubusercontent.com/StasBeep/diving/content-line/avatar-reviews.jpg",
+        "title": "Валентин М.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper justo nec arcu mollis, sed congue odio mollis. Donec feugiat pellentesque accumsan.2"
     },
     {
-        "img": "https://raw.githubusercontent.com/StasBeep/diving/content-line/default-img.jpg",
-        "title": "Peak Perfomance Buoyancy",
-        "description": "Курс мастерской плавучести Peak Perfomance Buoyancy.",
-        "link": "#"
+        "img": "https://raw.githubusercontent.com/StasBeep/diving/content-line/avatar-reviews.jpg",
+        "title": "Валентин М.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper justo nec arcu mollis, sed congue odio mollis. Donec feugiat pellentesque accumsan.3"
     },
     {
-        "img": "https://raw.githubusercontent.com/StasBeep/diving/content-line/default-img.jpg",
-        "title": "Peak Perfomance Buoyancy",
-        "description": "Курс мастерской плавучести Peak Perfomance Buoyancy.",
-        "link": "#"
+        "img": "https://raw.githubusercontent.com/StasBeep/diving/content-line/avatar-reviews.jpg",
+        "title": "Валентин М.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper justo nec arcu mollis, sed congue odio mollis. Donec feugiat pellentesque accumsan.4"
     }]
 }
