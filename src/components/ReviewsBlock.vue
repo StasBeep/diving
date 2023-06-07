@@ -10,7 +10,11 @@
       </li>
     </ol>
     <div class="reviews-block-btns">
-      <button class="reviews-block-btns-elipse" v-for="(item, idx) in curArr" :key="idx" @click="onClick(idx)">{{ idx }}</button>
+      <button
+        class="reviews-block-btns-elipse"
+        v-for="(item, idx) in curArr"
+        :key="idx"
+        @click="onClick(idx)"></button>
     </div>
     <button class="reviews-block-btn">Просмотреть все отзывы</button>
   </figure>
@@ -22,12 +26,36 @@ export default {
 
   props: {
     arrayVis: Array,
-    curArr: Number
+    curArr: Number,
+    cur: Number
   },
 
   methods: {
+    /**
+     * Эмит с номером новости
+     * @param { Number } page номер кнопки
+     */
     onClick (page) {
       this.$emit('changeReviews', page)
+      this.changeColor(page)
+    },
+
+    /**
+     * Изменение цвета в зависимости от активности
+     * @param { Number } i номер кнопки
+     */
+    changeColor (i) {
+      this.$el.children[3].children[this.cur].classList.remove('reviews-block-btns-elipse-active')
+      this.$el.children[3].children[i].classList.add('reviews-block-btns-elipse-active')
+    }
+  },
+
+  computed: {
+    /**
+     * Первое положение цвета elipse
+     */
+    firstPosColor () {
+      return this.cur
     }
   }
 }

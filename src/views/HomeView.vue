@@ -79,7 +79,7 @@
           <NewsInfo class="suggestion-cards" :dataNews="getOffers" />
         </section>
         <figure>
-          <ReviewsBlock :arrayVis="firstVisArray" :curArr="getReviews.length" @changeReviews="onChangePage" />
+          <ReviewsBlock :arrayVis="firstVisArray" :curArr="getReviews.length" @changeReviews="onChangePage" :cur="curReview" />
         </figure>
         <figure class="history">
           Вы спросите, есть ли дайвинг в Москве? Ответ однозначный – да, есть! Акватика предлагает обучение, как в Москве, так и за рубежом. Приятнее учиться на море скажете вы! Наверное да, но обратите внимание на то, что многие клубы подводного плавания за рубежом могут не иметь Русскоговорящий персонал (инструкторов) квалификация тоже остается загадкой, к тому же вам придется тратить драгоценное время отпуска на изучение учебников, таблиц, отработку навыков, сдачу экзаменов. Не лучше ли пройти обучение рядом с домом в удобное время, и спокойной обстановке, с квалифицированными инструкторами, а во время долгожданного отпуска наслаждаться всеми прелестями океана.
@@ -148,6 +148,10 @@ export default {
       fetchReviews: 'fetchReviews'
     }),
 
+    /**
+     * Изменение content карточек
+     * @param { Number } i номер review
+     */
     arrayVis (i) {
       const arrayVisible = []
       let cur = this._checkPageReviews(i - 1)
@@ -164,6 +168,10 @@ export default {
       this.arrayVis(this.curReview)
     },
 
+    /**
+     * Проверка на перебор по массиву
+     * @param { Number } page номер review
+     */
     _checkPageReviews (page) {
       if (page >= this.getReviews.length) {
         return 0
@@ -182,6 +190,9 @@ export default {
       getReviews: 'getReviews'
     }),
 
+    /**
+     * Исходный массив для отображения
+     */
     firstVisArray () {
       return this.arrayVis(this.curReview)
     }
