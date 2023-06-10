@@ -89,7 +89,7 @@
         </figure>
         <!--Секция фото-галерея-->
         <figure>
-          <FotoGallery />
+          <FotoGallery :fotoArray="getFotoGallery"/>
         </figure>
         <figure class="history">
           Подводное плавание – это истинное исцеление для каждого человека, меняющее приоритеты отдыха. Это возможность найти новые эмоции, завести знакомства с интересными людьми. Да,каждый человек к данному увлечению относится по своему, для многих этот мир выражает стремление к новому и прекрасному. Многие люди, увлечённые дайвингом с уверенностью скажут, что подводное плаванье – смело можно отнести к одному из лучших увлечений! Оно позволяет почувствовать невесомость, насладиться самыми чудесными пейзажами, скрытыми от обычного поля зрения. Здесь каждый чувствует себя свободным, будто бы парящим над землёй. Сегодня, это доступно каждому, кто стремится познать новое, к общению и позитивным эмоциям. Это незабываемое ощущение надолго остается внутри и зовет обратно под воду.
@@ -154,7 +154,8 @@ export default {
     ...mapActions('newsinfo', {
       fetchOffers: 'fetchOffers',
       fetchBlog: 'fetchBlog',
-      fetchReviews: 'fetchReviews'
+      fetchReviews: 'fetchReviews',
+      fetchFotoGallery: 'fetchFotoGallery'
     }),
 
     /**
@@ -196,7 +197,8 @@ export default {
     ...mapGetters('newsinfo', {
       getOffers: 'getOffers',
       getBlog: 'getBlog',
-      getReviews: 'getReviews'
+      getReviews: 'getReviews',
+      getFotoGallery: 'getFotoGallery'
     }),
 
     /**
@@ -212,6 +214,7 @@ export default {
     this.fetchOffers()
     this.fetchBlog()
     this.fetchReviews()
+    this.fetchFotoGallery()
   },
 
   beforeUnmount () {
@@ -219,6 +222,7 @@ export default {
     this.getOffers = []
     this.getBlog = []
     this.getReviews = []
+    this.getFotoGallery = []
   }
 }
 </script>
