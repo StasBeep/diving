@@ -78,6 +78,7 @@
           <h2 class="direct-title">Горячие <span class="direct-title-el">предложения</span></h2>
           <NewsInfo class="suggestion-cards" :dataNews="getOffers" />
         </section>
+        <!--Секция отзывы-->
         <figure class="reviews">
           <div class="reviews-wrp">
             <ReviewsBlock :arrayVis="firstVisArray" :curArr="getReviews.length" @changeReviews="onChangePage" :cur="curReview" />

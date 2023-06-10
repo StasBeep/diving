@@ -24,11 +24,14 @@
 
         &-feedback>.header-top-feedback {
             margin-top: 0;
+            margin-left: 150px;
         }
 
         &-social {
             margin: 0 !important;
             align-self: center;
+            padding-top: 6px;
+            box-sizing: border-box;
 
             &>.menu-social-li>.menu-social-li-link>.menu-social-li-link-svg {
                 fill: $main-white;
