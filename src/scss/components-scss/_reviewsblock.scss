@@ -127,6 +127,14 @@
                 background-color: $main-white;
             }
 
+            &-del-active {
+                background-color: $azure !important;
+            }
+
+            &:first-child {
+                background-color: $main-white;
+            }
+
             &:hover {
                 background-color: $main-white;
             }

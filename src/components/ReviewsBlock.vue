@@ -30,6 +30,10 @@ export default {
     cur: Number
   },
 
+  data: () => ({
+    firstLoad: true
+  }),
+
   methods: {
     /**
      * Эмит с номером новости
@@ -42,11 +46,22 @@ export default {
 
     /**
      * Изменение цвета в зависимости от активности
+     * + первый круг белый
      * @param { Number } i номер кнопки
      */
     changeColor (i) {
       this.$el.children[3].children[this.cur].classList.remove('reviews-block-btns-elipse-active')
       this.$el.children[3].children[i].classList.add('reviews-block-btns-elipse-active')
+
+      if (this.firstLoad) {
+        this.$el.children[3].children[0].classList.add('reviews-block-btns-elipse-del-active')
+        this.firstLoad = false
+      }
+
+      if (i === 0) {
+        this.$el.children[3].children[0].classList.remove('reviews-block-btns-elipse-del-active')
+        this.firstLoad = !this.firstLoad
+      }
     }
   },
 
@@ -57,6 +72,10 @@ export default {
     firstPosColor () {
       return this.cur
     }
+  },
+
+  mounted () {
+    console.clear()
   }
 }
 </script>
