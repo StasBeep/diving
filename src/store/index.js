@@ -35,6 +35,7 @@ const newsinfo = {
   state: {
     offers: [],
     reviews: [],
+    fotogallery: [],
     blog: []
   },
   getters: {
@@ -43,6 +44,9 @@ const newsinfo = {
 
     // Положение данных отзывы
     getReviews: state => state.reviews,
+
+    // Положение данных фото-галерея
+    getFotoGallery: state => state.fotogallery,
 
     // Положение данных наш блог
     getBlog: state => state.blog
@@ -54,6 +58,10 @@ const newsinfo = {
 
     setReviews (state, payload) {
       state.reviews = payload
+    },
+
+    setFotoGallery (state, payload) {
+      state.fotogallery = payload
     },
 
     setBlog (state, payload) {
@@ -95,6 +103,24 @@ const newsinfo = {
           .catch(error => console.log(error))
       }).then(res => {
         commit('setReviews', res)
+      })
+    },
+
+    /**
+     * Асинхронных запрос на данные фото-галерея
+     * @param { commit } Передача под mutations
+     * @returns Promise
+     */
+    fetchFotoGallery ({ commit }) {
+      return new Promise((resolve) => {
+        axios
+          .get(`${APIcontent}`)
+          .then(response => {
+            resolve(response.data.fotogallery)
+          })
+          .catch(error => console.log(error))
+      }).then(res => {
+        commit('setFotoGallery', res)
       })
     },
 

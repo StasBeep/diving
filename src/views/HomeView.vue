@@ -87,6 +87,10 @@
         <figure class="history">
           Вы спросите, есть ли дайвинг в Москве? Ответ однозначный – да, есть! Акватика предлагает обучение, как в Москве, так и за рубежом. Приятнее учиться на море скажете вы! Наверное да, но обратите внимание на то, что многие клубы подводного плавания за рубежом могут не иметь Русскоговорящий персонал (инструкторов) квалификация тоже остается загадкой, к тому же вам придется тратить драгоценное время отпуска на изучение учебников, таблиц, отработку навыков, сдачу экзаменов. Не лучше ли пройти обучение рядом с домом в удобное время, и спокойной обстановке, с квалифицированными инструкторами, а во время долгожданного отпуска наслаждаться всеми прелестями океана.
         </figure>
+        <!--Секция фото-галерея-->
+        <figure>
+          <FotoGallery :fotoArray="getFotoGallery"/>
+        </figure>
         <figure class="history">
           Подводное плавание – это истинное исцеление для каждого человека, меняющее приоритеты отдыха. Это возможность найти новые эмоции, завести знакомства с интересными людьми. Да,каждый человек к данному увлечению относится по своему, для многих этот мир выражает стремление к новому и прекрасному. Многие люди, увлечённые дайвингом с уверенностью скажут, что подводное плаванье – смело можно отнести к одному из лучших увлечений! Оно позволяет почувствовать невесомость, насладиться самыми чудесными пейзажами, скрытыми от обычного поля зрения. Здесь каждый чувствует себя свободным, будто бы парящим над землёй. Сегодня, это доступно каждому, кто стремится познать новое, к общению и позитивным эмоциям. Это незабываемое ощущение надолго остается внутри и зовет обратно под воду.
         </figure>
@@ -123,6 +127,7 @@ import ModalFeedback from '../components/ModalFeedback.vue'
 import NewsInfo from '../components/NewsInfo.vue'
 import SocialLink from '../components/SocialLink.vue'
 import ReviewsBlock from '@/components/ReviewsBlock.vue'
+import FotoGallery from '@/components/FotoGallery.vue'
 
 import FooterBlock from '@/components/Footer.vue'
 
@@ -135,6 +140,7 @@ export default {
     NewsInfo,
     SocialLink,
     ReviewsBlock,
+    FotoGallery,
     FooterBlock
   },
 
@@ -148,7 +154,8 @@ export default {
     ...mapActions('newsinfo', {
       fetchOffers: 'fetchOffers',
       fetchBlog: 'fetchBlog',
-      fetchReviews: 'fetchReviews'
+      fetchReviews: 'fetchReviews',
+      fetchFotoGallery: 'fetchFotoGallery'
     }),
 
     /**
@@ -190,7 +197,8 @@ export default {
     ...mapGetters('newsinfo', {
       getOffers: 'getOffers',
       getBlog: 'getBlog',
-      getReviews: 'getReviews'
+      getReviews: 'getReviews',
+      getFotoGallery: 'getFotoGallery'
     }),
 
     /**
@@ -206,6 +214,7 @@ export default {
     this.fetchOffers()
     this.fetchBlog()
     this.fetchReviews()
+    this.fetchFotoGallery()
   },
 
   beforeUnmount () {
@@ -213,6 +222,7 @@ export default {
     this.getOffers = []
     this.getBlog = []
     this.getReviews = []
+    this.getFotoGallery = []
   }
 }
 </script>
