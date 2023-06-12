@@ -1,36 +1,45 @@
-.foto-gallery {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.foto {
 
-    &-li {
-        margin-bottom: 15px;
-
-        &-img {
-            width: 318px;
-            height: 318px;
-        }
+    &-block-home {
+        margin: 0;
+        padding: 65px 35px 55px;
     }
 
-    &-btn {
-        @include font-size-line(500, 24px, 28px);
-        display: block;
-        margin: 15px auto 0;
-        padding: 18px 60px;
-        box-sizing: border-box;
-        background: linear-gradient(180deg, #5FC9F3 0%, #55ABF5 100%);
-        box-shadow: 0px 4px 10px rgba(92, 194, 243, 0.25);
-        border-radius: 12px;
-        border: 0.1px solid $azure;
-        color: $main-white;
-        transition: all 1s ease;
+    &-gallery {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        margin-top: 30px;
 
-        &:hover {
-            background: $main-white;
-            color: $azure;
+        &-li {
+            margin-bottom: 15px;
+
+            &-img {
+                width: 318px;
+                height: 318px;
+            }
+        }
+
+        &-btn {
+            @include font-size-line(500, 24px, 28px);
+            display: block;
+            margin: 15px auto 0;
+            padding: 18px 60px;
+            box-sizing: border-box;
+            background: linear-gradient(180deg, #5FC9F3 0%, #55ABF5 100%);
+            box-shadow: 0px 4px 10px rgba(92, 194, 243, 0.25);
+            border-radius: 12px;
+            border: 0.1px solid $azure;
+            color: $main-white;
+            transition: all 1s ease;
+
+            &:hover {
+                background: $main-white;
+                color: $azure;
+            }
         }
     }
 }
