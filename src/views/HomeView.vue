@@ -6,6 +6,7 @@
       <!--Шапка сайта-->
       <header class="header">
         <nav class="header-secondmenu">
+          <MobileMenuRouter />
           <MenuRouter class="header-secondmenu-route" :colorElement="colorElement" />
           <ModalFeedback class="header-secondmenu-feedback" />
           <MenuSocial class="header-secondmenu-social" />
@@ -82,6 +83,7 @@
 <script>
 import MenuRouter from '../components/MenuRouter.vue'
 import MenuSocial from '../components/MenuSocial.vue'
+import MobileMenuRouter from '../components/MobileMenuRouter.vue'
 import ModalFeedback from '../components/ModalFeedback.vue'
 
 export default {
@@ -89,6 +91,7 @@ export default {
   components: {
     MenuRouter,
     MenuSocial,
+    MobileMenuRouter,
     ModalFeedback
   },
 
