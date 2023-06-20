@@ -29,11 +29,14 @@ export default {
   },
 
   data: () => ({
-    elementShow: false,
-    statusCheckbox: false
+    elementShow: false, // положение видимости блоков
+    statusCheckbox: false // положение checkbox
   }),
 
   methods: {
+    /**
+     * Включение и выключение меню
+     */
     onGamburgerMenu () {
       console.log(this.$el)
       this.statusCheckbox = !this.statusCheckbox
@@ -46,6 +49,9 @@ export default {
       }
     },
 
+    /**
+     * Изменение цвета в зависимости от расположения
+     */
     setColorGamburger () {
       if (this.colorGabmburger) {
         this.$el.children[0].children[1].children[0].classList.add('header-transitions-mobile-menu-icon-color')
@@ -54,6 +60,9 @@ export default {
   },
 
   computed: {
+    /**
+     * Цвет гамбургера (true - белый)
+     */
     watchColorGamburger () {
       if (this.colorGabmburger) {
         this.setColorGamburger()
