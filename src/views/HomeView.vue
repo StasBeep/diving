@@ -6,7 +6,7 @@
       <!--Шапка сайта-->
       <header class="header">
         <nav class="header-secondmenu">
-          <MobileMenuRouter />
+          <MobileMenuRouter :colorGabmburger="false"/>
           <MenuRouter class="header-secondmenu-route" :colorElement="colorElement" />
           <ModalFeedback class="header-secondmenu-feedback" />
           <MenuSocial class="header-secondmenu-social" />

@@ -49,7 +49,7 @@ export default {
   computed: {
     nowColorElement () {
       if (this.colorElement === 'white') {
-        this.changeColor()
+        this._changeColor()
         return 'white'
       }
       return 'blue'
