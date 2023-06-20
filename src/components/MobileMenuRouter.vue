@@ -38,7 +38,6 @@ export default {
      * Включение и выключение меню
      */
     onGamburgerMenu () {
-      console.log(this.$el)
       this.statusCheckbox = !this.statusCheckbox
       if (this.statusCheckbox) {
         this.$el.style.backgroundColor = 'white'
