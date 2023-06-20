@@ -6,6 +6,7 @@
       <!--Шапка сайта-->
       <header class="header">
         <nav class="header-secondmenu">
+          <MobileMenuRouter :colorGabmburger="false"/>
           <MenuRouter class="header-secondmenu-route" :colorElement="colorElement" />
           <ModalFeedback class="header-secondmenu-feedback" />
           <MenuSocial class="header-secondmenu-social" />
@@ -124,6 +125,7 @@ import { mapActions, mapGetters } from 'vuex'
 
 import MenuRouter from '../components/MenuRouter.vue'
 import MenuSocial from '../components/MenuSocial.vue'
+import MobileMenuRouter from '../components/MobileMenuRouter.vue'
 import ModalFeedback from '../components/ModalFeedback.vue'
 
 import NewsInfo from '../components/NewsInfo.vue'
@@ -138,6 +140,7 @@ export default {
   components: {
     MenuRouter,
     MenuSocial,
+    MobileMenuRouter,
     ModalFeedback,
     NewsInfo,
     SocialLink,

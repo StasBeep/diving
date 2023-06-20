@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="menu-router-nav">
     <router-link v-show="elementShow" class="menu-router-main" to="/">Главная</router-link>
     <button class="menu-router" v-for="item in collectionsRouter" :key="item" @click="stepRouting(item)">
         {{ item }}
