@@ -6,13 +6,13 @@
       <!--Шапка сайта-->
       <header class="header">
         <nav class="header-secondmenu">
-          <MobileMenuRouter :colorGabmburger="false"/>
+          <MobileMenuRouter class="header-secondmenu-mobile" :colorGabmburger="true"/>
           <MenuRouter class="header-secondmenu-route" :colorElement="colorElement" />
           <ModalFeedback class="header-secondmenu-feedback" />
           <MenuSocial class="header-secondmenu-social" />
         </nav>
         <div class="header-info">
-          <img src="../assets/logo_aquatica.svg" alt="logo">
+          <img src="../assets/logo_aquatica.svg" alt="logo" id="logo">
           <span class="header-info-text">Путешествие в тысячу миль</span>
           <span class="header-info-text">Начинается с первого клика</span>
           <button class="header-info-btn">Хочу нырять...</button>
@@ -63,6 +63,7 @@
             <router-link class="header-cards-li-router" to="#">Приобрести</router-link>
           </li>
         </ol>
+        <div class="header-back"></div>
       </header>
 
       <!--Основная часть-->

@@ -14,7 +14,7 @@
           <span class="footer-right-version">version: {{ version }}</span>
       </div>
     </div>
-    <a class="footer-anchor" href="#" v-show="widthWindowsShow">Вернуться наверх</a>
+    <a class="footer-anchor" href="#logo" v-show="widthWindowsShow">Вернуться наверх</a>
   </div>
 </template>
 

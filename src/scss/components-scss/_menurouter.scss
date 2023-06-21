@@ -5,6 +5,16 @@
     box-sizing: border-box;
     align-items: center;
 
+    &-line {
+        &-mobile {
+            display: none;
+        }
+
+        &-feedback {
+            display: none;
+        }
+    }
+
     &-router {
         @include font-size-line();
         height: 30px;
@@ -36,7 +46,7 @@
             &::before {
                 content: '\25cf';
                 margin-right: 10px;
-                display:inline-block;
+                display: inline-block;
             }
 
             &:nth-child(2)::before {
