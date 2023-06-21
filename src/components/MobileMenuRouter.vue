@@ -42,9 +42,19 @@ export default {
       if (this.statusCheckbox) {
         this.$el.style.backgroundColor = 'white'
         this.elementShow = true
+        if (this.colorGabmburger) {
+          this.$el.classList.add('header-transitions-mobile-plus-white')
+        } else {
+          this.$el.classList.add('header-transitions-mobile-plus')
+        }
       } else {
         this.$el.style.backgroundColor = 'transparent'
         this.elementShow = false
+        if (this.colorGabmburger) {
+          this.$el.classList.remove('header-transitions-mobile-plus-white')
+        } else {
+          this.$el.classList.remove('header-transitions-mobile-plus')
+        }
       }
     },
 

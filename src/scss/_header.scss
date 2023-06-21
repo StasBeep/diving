@@ -140,6 +140,14 @@
             &-down {
                 margin-top: 65px;
             }
+
+            &-plus {
+                width: calc(100% - 180px);
+
+                &-white {
+                    width: calc(100% - 100px);
+                }
+            }
         }
     }
 
@@ -357,9 +365,24 @@
     }
 }
 
+@media (max-width: 1230px) {
+    .header {
+        &-top {
+            justify-content: end;
+
+            &-feed {
+                display: none;
+            }
+        }
+    }
+}
 
 @media (max-width: 1200px) {
     .header {
+        &-top {
+            background-position-x: -120px;
+        }
+
         &-cards {
             width: 1100px;
             overflow: auto hidden;
@@ -392,12 +415,15 @@
     .header {
         background-position-x: -360px;
 
+        &-top {
+            background-position-x: -210px;
+        }
+
         &-secondmenu {
             justify-content: end;
             position: relative;
 
             &-mobile {
-                width: calc(100% - 100px);
                 display: block;
                 position: absolute;
                 top: -14px;
@@ -422,6 +448,11 @@
 @media (max-width: 768px) {
     .header {
         background-position-x: -560px;
+
+        &-top {
+            background-size: 140%;
+            padding-bottom: 79px;
+        }
 
         &-back {
             background-position-x: -560px;
@@ -479,9 +510,47 @@
     }
 }
 
+@media (max-width: 650px) {
+    .header-top {
+        background-size: 150%;
+        padding-bottom: 110px;
+
+        &-img {
+            width: 170px;
+            height: 65px;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .header {
+        &-top {
+            padding-bottom: 50px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        &-top {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        &-transitions-mobile-plus {
+            width: calc(100% - 65px);
+        }
+    }
+}
+
+
 @media (max-width: 475px) {
     .header {
         background-position-x: -940px;
+
+        &-top {
+            background-size: 170%;
+        }
 
         &-info {
             &>img {
@@ -522,6 +591,10 @@
 
 @media (max-width: 374px) {
     .header {
+        &-top {
+            padding-bottom: 35px;
+        }
+
         &-secondmenu-mobile {
             padding-bottom: 40px;
         }

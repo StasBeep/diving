@@ -20,7 +20,6 @@
 
         <!--Подвал сайта-->
         <footer>
-            <FooterBlock />
         </footer>
     </div>
 </template>
@@ -28,13 +27,11 @@
 <script>
 
 import HeaderMain from '../components/Header.vue'
-import FooterBlock from '../components/Footer.vue'
 
 export default {
   name: 'CatalogView',
   components: {
-    HeaderMain,
-    FooterBlock
+    HeaderMain
   }
 }
 </script>
