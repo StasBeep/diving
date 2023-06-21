@@ -6,7 +6,7 @@
       <!--Шапка сайта-->
       <header class="header">
         <nav class="header-secondmenu">
-          <MobileMenuRouter :colorGabmburger="false"/>
+          <MobileMenuRouter class="header-secondmenu-mobile" :colorGabmburger="true"/>
           <MenuRouter class="header-secondmenu-route" :colorElement="colorElement" />
           <ModalFeedback class="header-secondmenu-feedback" />
           <MenuSocial class="header-secondmenu-social" />
@@ -63,6 +63,7 @@
             <router-link class="header-cards-li-router" to="#">Приобрести</router-link>
           </li>
         </ol>
+        <div class="header-back"></div>
       </header>
 
       <!--Основная часть-->
