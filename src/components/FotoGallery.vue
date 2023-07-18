@@ -2,7 +2,7 @@
   <div>
     <ol class="foto-gallery">
       <li class="foto-gallery-li" v-for="(item, idx) in displayArray" :key="idx">
-          <img  class="foto-gallery-li-img" v-bind:src="fotoArray[item].image" alt="foto-gallery" width="318" height="318">
+          <img  class="foto-gallery-li-img" v-bind:src="fotoArray[item - 1].image" alt="foto-gallery" width="318" height="318">
       </li>
     </ol>
     <button class="foto-gallery-btn" v-if="displayBtn" @click="addFotoContent">Смотреть ещё фото</button>
@@ -29,7 +29,7 @@ export default {
       this.nArrayLine = Math.floor(Math.sqrt(this.fotoArray.length))
       this.activLine++
       if (this.activLine === this.nArrayLine) {
-        this.displayArray = this.fotoArray.length - 1
+        this.displayArray = this.fotoArray.length
         this.displayBtn = false
       } else {
         this.displayArray = this.displayArray * this.activLine
